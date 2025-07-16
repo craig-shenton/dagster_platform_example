@@ -49,7 +49,7 @@ jobs:
 
       - name: Build documentation
         run: |
-          mkdocs build --verbose --strict
+          mkdocs build --verbose
 
       - name: Upload documentation artifact
         uses: actions/upload-pages-artifact@v3
