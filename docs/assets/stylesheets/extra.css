@@ -1,0 +1,356 @@
+/* GOV.UK inspired styling for Dagster Platform Documentation */
+
+/* Root variables for consistent theming */
+:root {
+  --md-primary-fg-color: #000000;
+  --md-primary-fg-color--light: #1D70B8;
+  --md-primary-fg-color--dark: #003078;
+  --md-accent-fg-color: #1D70B8;
+  --md-accent-fg-color--transparent: rgba(29, 112, 184, 0.1);
+  --md-footer-bg-color: #f8f8f8;
+  --md-footer-fg-color: #383838;
+  --govuk-blue: #1D70B8;
+  --govuk-dark-blue: #003078;
+  --govuk-light-gray: #f8f8f8;
+  --govuk-border-gray: #b1b4b6;
+}
+
+/* Base typography adjustments */
+html {
+  font-size: 0.85rem;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--govuk-dark-blue);
+}
+
+/* Links */
+a {
+  color: var(--govuk-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+}
+
+a:hover {
+  color: var(--govuk-dark-blue);
+  text-decoration-thickness: 3px;
+}
+
+/* Header styling */
+.md-header {
+  box-shadow: none;
+  border-bottom: 10px solid var(--govuk-blue);
+}
+
+.md-header__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.md-header__button {
+  color: white;
+}
+
+/* Navigation */
+.md-nav {
+  font-size: 15px;
+}
+
+.md-nav__item .md-nav__link {
+  color: var(--govuk-dark-blue);
+}
+
+.md-nav__item .md-nav__link:hover {
+  color: var(--govuk-blue);
+  text-decoration: underline;
+}
+
+.md-nav__item .md-nav__link--active {
+  color: var(--govuk-blue);
+  font-weight: 700;
+}
+
+/* Tabs */
+.md-tabs {
+  background-color: var(--govuk-light-gray);
+  border-bottom: 1px solid var(--govuk-border-gray);
+}
+
+.md-tabs__item {
+  font-weight: 500;
+}
+
+.md-tabs__link {
+  color: var(--govuk-dark-blue);
+  font-size: 16px;
+}
+
+.md-tabs__link:hover {
+  color: var(--govuk-blue);
+}
+
+.md-tabs__link--active {
+  color: var(--govuk-blue);
+  font-weight: 700;
+}
+
+/* Content area */
+.md-content {
+  background-color: white;
+}
+
+.md-content__inner {
+  padding: 1.5rem;
+}
+
+/* Code blocks */
+.md-typeset pre {
+  background-color: #f8f8f8;
+  border: 1px solid var(--govuk-border-gray);
+  border-radius: 4px;
+}
+
+.md-typeset code {
+  background-color: #f8f8f8;
+  border: 1px solid var(--govuk-border-gray);
+  border-radius: 2px;
+  padding: 0.1em 0.3em;
+}
+
+/* Tables */
+.md-typeset table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.md-typeset th, .md-typeset td {
+  border: 1px solid var(--govuk-border-gray);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.md-typeset th {
+  background-color: var(--govuk-light-gray);
+  font-weight: 700;
+  color: var(--govuk-dark-blue);
+}
+
+/* Admonitions - GOV.UK inspired */
+.md-typeset .admonition {
+  border-left: 4px solid var(--govuk-blue);
+  background-color: rgba(29, 112, 184, 0.05);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.md-typeset .admonition.note {
+  border-left-color: var(--govuk-blue);
+}
+
+.md-typeset .admonition.warning {
+  border-left-color: #ffdd00;
+  background-color: rgba(255, 221, 0, 0.05);
+}
+
+.md-typeset .admonition.danger {
+  border-left-color: #d4351c;
+  background-color: rgba(212, 53, 28, 0.05);
+}
+
+.md-typeset .admonition.success {
+  border-left-color: #00703c;
+  background-color: rgba(0, 112, 60, 0.05);
+}
+
+.md-typeset .admonition-title {
+  font-weight: 700;
+  color: var(--govuk-dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.md-button {
+  background-color: var(--govuk-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.md-button:hover {
+  background-color: var(--govuk-dark-blue);
+  color: white;
+  text-decoration: none;
+}
+
+.md-button--primary {
+  background-color: var(--govuk-blue);
+}
+
+.md-button--secondary {
+  background-color: transparent;
+  color: var(--govuk-blue);
+  border: 2px solid var(--govuk-blue);
+}
+
+.md-button--secondary:hover {
+  background-color: var(--govuk-blue);
+  color: white;
+}
+
+/* Search */
+.md-search__form {
+  background-color: white;
+  border: 2px solid var(--govuk-border-gray);
+  border-radius: 4px;
+}
+
+.md-search__input {
+  color: var(--govuk-dark-blue);
+}
+
+.md-search__input::placeholder {
+  color: var(--govuk-border-gray);
+}
+
+/* Footer */
+.md-footer {
+  background-color: var(--md-footer-bg-color);
+  color: var(--md-footer-fg-color);
+  border-top: 1px solid var(--govuk-border-gray);
+  padding: 2rem 0;
+}
+
+.md-footer__inner {
+  text-align: center;
+}
+
+.md-footer__title {
+  font-weight: 700;
+  color: var(--govuk-dark-blue);
+}
+
+.md-footer__link {
+  color: var(--govuk-blue);
+}
+
+.md-footer__link:hover {
+  color: var(--govuk-dark-blue);
+}
+
+/* Sidebar */
+.md-sidebar {
+  background-color: white;
+  border-right: 1px solid var(--govuk-border-gray);
+}
+
+.md-sidebar__scrollwrap {
+  background-color: white;
+}
+
+/* Table of Contents */
+.md-nav--secondary {
+  border-left: 1px solid var(--govuk-border-gray);
+}
+
+.md-nav--secondary .md-nav__title {
+  color: var(--govuk-dark-blue);
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--govuk-dark-blue);
+    color: white;
+  }
+  
+  .md-nav--primary .md-nav__item .md-nav__link {
+    color: var(--govuk-dark-blue);
+  }
+}
+
+/* Custom banner for important notices */
+.govuk-banner {
+  background-color: var(--govuk-blue);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.govuk-banner a {
+  color: white;
+  text-decoration: underline;
+}
+
+.govuk-banner a:hover {
+  color: #f0f0f0;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge--stable {
+  background-color: #00703c;
+  color: white;
+}
+
+.status-badge--beta {
+  background-color: #ffdd00;
+  color: #000000;
+}
+
+.status-badge--alpha {
+  background-color: #d4351c;
+  color: white;
+}
+
+/* Code syntax highlighting adjustments */
+.highlight .hll { background-color: #f8f8f8 }
+.highlight .c { color: #6f777d; font-style: italic } /* Comment */
+.highlight .k { color: #d73a49; font-weight: bold } /* Keyword */
+.highlight .s { color: #032f62 } /* String */
+.highlight .nf { color: #6f42c1 } /* Function name */
+.highlight .nc { color: #e36209 } /* Class name */
+
+/* Mermaid diagrams styling */
+.mermaid {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Print styles */
+@media print {
+  .md-header, .md-footer, .md-sidebar {
+    display: none !important;
+  }
+  
+  .md-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+}
