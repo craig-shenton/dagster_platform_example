@@ -9,7 +9,6 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
-  custom_dir: overrides
   logo: assets/images/dagster-logo.svg
   favicon: assets/images/favicon.ico
   palette:
@@ -85,17 +84,6 @@ nav:
 
 plugins:
   - search
-  - mkdocstrings:
-      default_handler: python
-      handlers:
-        python:
-          paths: ["dagster-platform", "dagster-project-template"]
-          options:
-            docstring_style: google
-            docstring_options:
-              ignore_init_summary: true
-            merge_init_into_class: true
-            show_submodules: true
   - git-revision-date-localized:
       type: datetime
       enable_creation_date: true
