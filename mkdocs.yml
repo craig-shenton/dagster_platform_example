@@ -9,12 +9,13 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/images/dagster-logo.svg
   favicon: assets/images/favicon.ico
   palette:
     primary: custom
   font:
-    text: GDS Transport
+    text: Inter
     code: Fira Code
   features:
     - navigation.tabs
