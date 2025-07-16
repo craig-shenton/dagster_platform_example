@@ -1,0 +1,19 @@
+{
+    "project_name": "my-dagster-project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+    "project_description": "A new Dagster data pipeline project",
+    "author_name": "Data Engineering Team",
+    "author_email": "data-engineering@example.gov.uk",
+    "project_version": "0.1.0",
+    "python_version": "3.9",
+    "dagster_version": "1.5.0",
+    "use_dbt": ["yes", "no"],
+    "compute_environment": ["lambda", "fargate", "eks", "batch"],
+    "data_warehouse": ["postgres", "redshift", "bigquery", "snowflake"],
+    "object_storage": ["s3", "gcs", "azure_blob"],
+    "enable_data_quality_checks": ["yes", "no"],
+    "enable_lineage_tracking": ["yes", "no"],
+    "enable_cost_tracking": ["yes", "no"],
+    "compliance_framework": ["gdpr", "uk_data_protection", "none"],
+    "monitoring_level": ["basic", "standard", "comprehensive"]
+}
