@@ -1,0 +1,145 @@
+site_name: Dagster Platform Documentation
+site_url: https://craig-shenton.github.io/dagster_platform_example/
+site_description: 'Comprehensive documentation for the Dagster platform and data engineering best practices'
+site_author: 'Data Engineering Team'
+docs_dir: docs/
+repo_name: 'dagster_platform_example'
+repo_url: 'https://github.com/craig-shenton/dagster_platform_example/'
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/images/dagster-logo.svg
+  favicon: assets/images/favicon.ico
+  palette:
+    primary: custom
+  font:
+    text: GDS Transport
+    code: Fira Code
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - toc.integrate
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Overview: getting-started/overview.md
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quick-start.md
+    - Project Setup: getting-started/project-setup.md
+  - Architecture:
+    - Platform Overview: architecture/platform-overview.md
+    - Data Layers: architecture/data-layers.md
+    - Compute Orchestration: architecture/compute-orchestration.md
+    - Resource Management: architecture/resource-management.md
+  - Platform Core:
+    - Resources: platform-core/resources.md
+    - Asset Checks: platform-core/asset-checks.md
+    - Partitions: platform-core/partitions.md
+    - IO Managers: platform-core/io-managers.md
+    - Compute Kinds: platform-core/compute-kinds.md
+  - Observability:
+    - Monitoring: observability/monitoring.md
+    - Sensors: observability/sensors.md
+    - Hooks: observability/hooks.md
+    - Alerts: observability/alerts.md
+    - Metrics: observability/metrics.md
+  - SDK:
+    - Decorators: sdk/decorators.md
+    - Asset Factories: sdk/asset-factories.md
+    - Type Definitions: sdk/types.md
+    - Utilities: sdk/utilities.md
+  - Governance:
+    - Data Quality: governance/data-quality.md
+    - Compliance: governance/compliance.md
+    - Security: governance/security.md
+    - Policies: governance/policies.md
+    - Lineage: governance/lineage.md
+  - Deployment:
+    - Infrastructure: deployment/infrastructure.md
+    - Kubernetes: deployment/kubernetes.md
+    - Docker: deployment/docker.md
+    - Terraform: deployment/terraform.md
+    - CI/CD: deployment/ci-cd.md
+  - Best Practices:
+    - Asset Development: best-practices/asset-development.md
+    - Data Pipeline Design: best-practices/data-pipeline-design.md
+    - Performance Optimization: best-practices/performance-optimization.md
+    - Cost Management: best-practices/cost-management.md
+    - Testing: best-practices/testing.md
+  - Reference:
+    - API Documentation: reference/api-docs.md
+    - Configuration: reference/configuration.md
+    - Troubleshooting: reference/troubleshooting.md
+    - FAQ: reference/faq.md
+    - Glossary: reference/glossary.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: ["dagster-platform", "dagster-project-template"]
+          options:
+            docstring_style: google
+            docstring_options:
+              ignore_init_summary: true
+            merge_init_into_class: true
+            show_submodules: true
+  - git-revision-date-localized:
+      type: datetime
+      enable_creation_date: true
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+  - md_in_html
+  - attr_list
+  - def_list
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/craig-shenton/dagster_platform_example
+    - icon: fontawesome/solid/book
+      link: https://docs.dagster.io/
+  version:
+    provider: mike
+    default: stable
+
+copyright: Copyright &copy; 2025 Data Engineering Team
