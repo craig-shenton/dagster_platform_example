@@ -15,7 +15,7 @@ theme:
   palette:
     primary: custom
   font:
-    text: GDS Transport
+    text: Inter
     code: Fira Code
   features:
     - navigation.tabs
@@ -85,17 +85,6 @@ nav:
 
 plugins:
   - search
-  - mkdocstrings:
-      default_handler: python
-      handlers:
-        python:
-          paths: ["dagster-platform", "dagster-project-template"]
-          options:
-            docstring_style: google
-            docstring_options:
-              ignore_init_summary: true
-            merge_init_into_class: true
-            show_submodules: true
   - git-revision-date-localized:
       type: datetime
       enable_creation_date: true
